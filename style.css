@@ -1,0 +1,383 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #eff1f3;
+    width: 100%;
+    height: 100%;
+    font-family: 'Futura', 'Helvetica Neue', sans-serif, Arial;
+}
+
+.navbar {
+    background: rgba(41, 41, 41, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 12;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 15px;
+    font-size: 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(193, 193, 193);
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #dbd3d8;
+}
+
+#home canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+section {
+    min-height: 100vh;
+    padding-top: 50px; /* Adjust based on your navbar's height */
+    box-sizing: border-box;
+    /* Other styling */
+}
+
+#home {
+    min-height: 100vh;
+    position: relative;
+    /* Styles specific to home section */
+}
+
+#about {
+    min-height: 100vh;
+    padding-top: 60px; /* Adjust this based on navbar height */
+    background-color: #f3f3f3; /* Different background for clear distinction */
+    /* Other styles for about and projects */
+}
+
+.home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 11; /* Ensures text is above the canvas */
+    background-color: #eff1f3; /* Optional: Adds a semi-transparent background for readability */
+    opacity: 0.8;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-radius: 20px;
+}
+
+.name-underline {
+    width: 25%; /* Adjust the width as needed */
+    border: 0;
+    height: 1px;
+    background-color: #333; /* Set the line color */
+    margin: 10px auto 20px; /* Adjust top and bottom margins as needed */
+}
+
+.home-text h1 {
+    font-size: 2em;
+    margin-bottom: 1.2em; /* Space between h1 and p */
+}
+
+.home-text p {
+    font-size: 1em;
+    margin-top: 0;
+}
+
+.social-links {
+    position: absolute;
+    top: calc(50% + 100px); /* Adjust this value based on the size of your intro text */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 11; /* Ensures links are above the canvas */
+}
+
+.social-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #f3f3f3;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer; /* Ensures cursor changes to pointer on hover */
+}
+
+.social-button i {
+    color: #333; /* Icon color */
+    font-size: 28px; /* Adjust icon size as needed */
+}
+
+.social-button:hover {
+    background-color: #e1e1e1;
+    color: #000;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px; /* Size of the arrow */
+    color: #000; /* Color of the arrow */
+    cursor: pointer;
+    animation: bounce 5s infinite; /* 2s for bounce + 5s for delay */
+    z-index: 13;
+}
+
+@keyframes bounce {
+    0%, 20% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-30px);
+    }
+    /* From 20% to 100%, there's no movement, creating a pause */
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#about {
+    background: #cad2c5; /* Sets the background color of the about section */
+    /* If you want the about section to be the full height of the viewport, add this line */
+    min-height: 100vh;
+}
+
+.about-container {
+    display: flex;
+    align-items: center; /* This will vertically center the content */
+    justify-content: center; /* This will horizontally center the content */
+    margin: 0 auto;
+    max-width: 1200px; /* Or whatever maximum width you prefer */
+    padding: 40px;
+    gap: 20px; /* This adds space between the image and the text */
+}
+
+.about-image {
+    flex: 1; /* This will allow the image to grow */
+    max-width: calc(33.33% - 20px); /* Adjusts the width to be one-third minus the gap */
+    margin-right: 20px; /* Keeps some space between the image and the text */
+    margin-top: 50px;
+    width: 100%; /* Makes the image responsive */
+    border-radius: 10px; /* Optional styling */
+    object-fit: cover; /* This will prevent the image from stretching */
+}
+
+.about-text {
+    margin-top: 50px;
+    flex: 2; /* This will allow the text to grow twice as much as the image */
+    padding: 20px;
+    color: #000; /* Your desired text color */
+}
+
+.about-text h1 {
+    margin-bottom: 40px;
+    text-align: center; /* Aligns the text to the left */
+}
+#projects {
+    background-color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will center the grid vertically */
+    align-items: center; /* This will center the grid horizontally */
+    height: 100vh; /* This gives the section a full viewport height */
+    text-align: center;
+    padding: 50px;
+}
+
+.projects-grid {
+    /* Your existing styles */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%; /* Ensure the grid takes the full width of the flex container */
+    max-width: 1200px; /* Or whatever maximum width you prefer */
+    margin: 0 auto; /* This centers the grid if it's narrower than the max-width */
+}
+
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-info h3 {
+    font-size: 1.25em;
+    margin: 0.5em 0;
+}
+
+.project-info p {
+    font-size: 1em;
+    margin: 0.5em 0;
+}
+
+.project-date {
+    display: block;
+    text-align: left;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.project-detail-modal {
+    /* Positioning and Sizing */
+    position: fixed;
+    width: 65%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%); /* Start slightly off-screen (below) */
+
+    /* Styling */
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    overflow: auto;
+
+    /* Initial Visibility and Opacity */
+    visibility: hidden;
+    opacity: 0;
+
+    /* Transition */
+    transition: visibility 0s linear 0.5s, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.project-detail-modal.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%); /* Move to center screen */
+    transition: visibility 0s linear 0s, opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+
+.project-description {
+    text-align: center;
+    margin: 10%;
+}
+.project-description h4 {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .project-description ul {
+    list-style-type: disc; /* Adds bullet points */
+    padding-left: 20px; /* Indent bullet points */
+  }
+  
+  .project-description li {
+    margin-bottom: 10px; /* Space between bullet points */
+    text-align: left;
+  }
+  
+  .project-description p {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+.project-description li strong {
+    font-weight: bold; /* Bold text for subheadings */
+}
+
+.project-description img {
+    width: 50%; /* Adjust as necessary */
+    height: auto;
+    border-radius: 25px;
+    margin-top: 10px;
+    border: 1px solid #ddd; /* Optional border */
+}
+
+.project-title {
+    text-align:center;
+    font-size: 2.5em; /* Large font size for the title */
+    margin-top: 0.5em;
+    padding-top: 5%;
+  }
+  
+  
+  .title-underline {
+    width: 40%; /* Adjust the width as necessary */
+    height: 2px;
+    background-color: #333; /* Line color */
+    margin-top: 2px; /* Small space to nudge it closer to the subtitle */
+  }
+  
+  /* Add a top margin to the first paragraph after the subtitle to create space */
+  .project-description > p:first-of-type {
+    margin-top: 20px;
+  }
+  
+  .image-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space below the description */
+  }
+  
+  .screenshot {
+    width: 75%; /* Full width within the column */
+    border-radius: 10px; /* Rounded corners */
+  margin: 0 auto; /* Space between image and bottom of the modal */
+  }
+  

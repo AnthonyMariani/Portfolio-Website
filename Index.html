@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anthony Mariani Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li>
+          <a href="images/AnthonyMarianiResume.pdf" target="_blank">Resume</a>
+        </li>
+      </ul>
+    </div>
+
+    <section id="home">
+      <div class="home-text">
+        <h1>Anthony Mariani</h1>
+        <hr class="name-underline" />
+        <p>
+          I'm passionate about building innovative tech solutions and uncovering
+          key insights through data-driven strategies, constantly exploring new
+          ways to improve and innovate.
+        </p>
+      </div>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/anthony-mariani/"
+          class="social-button linkedin"
+          target="_blank"
+          title="LinkedIn"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="images/AnthonyMarianiResume.pdf"
+          class="social-button resume"
+          target="_blank"
+          title="Resume"
+          rel="noopener noreferrer"
+        >
+          <i class="fas fa-file-alt"></i>
+        </a>
+        <a
+          href="https://github.com/AnthonyMariani"
+          class="social-button github"
+          target="_blank"
+          title="GitHub"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a href="#about">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+
+      <canvas></canvas>
+    </section>
+    <section id="about">
+      <div class="about-container">
+        <img src="images/Portrait.jpg" class="about-image" />
+        <div class="about-text">
+          <h1>Hi there! I'm Anthony</h1>
+          <p>
+            I am a senior at Miami University majoring in Economics with a minor
+            in Computer Science. My educational journey has equipped me with a
+            unique blend of analytical insight and technical expertise. This
+            combination empowers me to tackle challenges with both strategic
+            thinking and practical application, making me well-suited for roles
+            where innovation and data-driven decision-making are key.
+          </p>
+
+          <p>
+            Throughout my college career, I've found joy in deciphering complex
+            data, leading me to build statistical applications and engage in
+            data visualization for both academic and personal projects. My
+            proficiency in SQL and database management, crucial for data
+            analytics, is complemented by my skill in R for statistical
+            modeling, enhancing my ability to analyze and interpret data
+            effectively. This, combined with my web development background,
+            gives me a comprehensive understanding of the digital landscape and
+            data management.
+          </p>
+          <p>
+            With an entrepreneurial mindset, I am eager to contribute to
+            environments where my skills can foster impactful solutions and
+            drive progress. I'm excited to explore opportunities that align with
+            my passion for data and technology, where I can continue to grow and
+            make meaningful contributions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">My Latest Work</h2>
+      <div class="projects-grid">
+        <!-- Project Card -->
+        <div class="project-card" onclick="openProjectDetail('project1')">
+          <div class="project-image">
+            <img src="images/NFLApp.png" alt="NFL Analytics Dashboard" />
+          </div>
+          <div class="project-info">
+            <h3>NFL Analytics Dashboard</h3>
+            <p>
+              Explore NFL player statistics with my NFL Analytics Dashboard, a
+              user-friendly application crafted through SQL and Java. It
+              showcases my expertise in database creation from CSV data,
+              offering an accessible platform for detailed player stats
+              analysis. Experience the seamless blend of data management and
+              intuitive design in this interactive tool.
+            </p>
+          </div>
+        </div>
+        <!-- Additional project cards -->
+
+        <div class="project-card" onclick="openProjectDetail('project2')">
+          <div class="project-image">
+            <img src="images/Project2.png" alt="Project 2 Description" />
+          </div>
+          <div class="project-info">
+            <h3>Project 2 Title</h3>
+            <p>
+              Brief description of Project 2. You can highlight key features,
+              the technologies used, and the value it provides.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProjectDetail('project3')">
+          <div class="project-image">
+            <img src="images/Project3.png" alt="Project 3 Description" />
+          </div>
+          <div class="project-info">
+            <h3>Project 3 Title</h3>
+            <p>
+              Brief description of Project 2. You can highlight key features,
+              the technologies used, and the value it provides.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div id="project1" class="project-detail-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeProjectDetail('project1')"
+          >&times;</span
+        >
+        <h3 class="project-title">NFL Analytics Dashboard</h3>
+        <hr class="title-underline" />
+        <div class="project-description">
+          <p>
+            The NFL Analytics Dashboard is an innovative tool designed to
+            distill comprehensive NFL player statistics from a CSV-sourced SQL
+            database into user-friendly visual data, facilitating easy access to
+            player performance metrics, fantasy football management, and
+            in-depth statistical analysis through a sleek JavaFX interface.
+          </p>
+          <h4>Skills & Tools:</h4>
+          <ul>
+            <li>
+              <strong>SQL Expertise:</strong> Demonstrated ability to structure
+              and query MySQL databases for responsive data retrieval.
+            </li>
+            <li>
+              <strong>Database Design:</strong> Engineered a normalized
+              relational database schema to efficiently manage and query NFL
+              player statistics.
+            </li>
+            <li>
+              <strong>Java Proficiency:</strong> Utilized JDBC to integrate Java
+              application logic with SQL database operations seamlessly.
+            </li>
+            <li>
+              <strong>Data Importing and Parsing:</strong> Automated the
+              extraction and transformation of extensive NFL data from CSV files
+              into the database.
+            </li>
+            <li>
+              <strong>User Interface Design:</strong> Developed with JavaFX to
+              ensure a responsive and intuitive user interaction, emphasizing a
+              clean and navigable design.
+            </li>
+            <li>
+              <strong>Analytics and Reporting:</strong> Implemented aggregation
+              queries to present statistical data and performance metrics in a
+              user-friendly format.
+            </li>
+          </ul>
+
+          <h4>Project Insights:</h4>
+          <ul>
+            <li>
+              Deployed dynamic SQL statements within Java methods to fetch
+              real-time data, providing users with up-to-date insights.
+            </li>
+            <li>
+              Enabled complex data analysis features, like filtering NFL players
+              by stats, through meticulous SQL query development.
+            </li>
+            <li>
+              Facilitated a fantasy football feature allowing users to simulate
+              team management scenarios based on live data feeds.
+            </li>
+          </ul>
+          <p>
+            As for the functionality, we have the Player Search tab that allows
+            users to search stats by player, which will show them individual
+            game statistics and season statistics. The All Players tab allows
+            users to filter the database by position in order to find players.
+            Third, we have the Leaderboards tab that allows users to filter the
+            database by nearly any metric, showing the leaders in each
+            respective statistic. Finally, we have the Fantasy tab that allows
+            users to track player performance and PPR fantasy points across the
+            season. This dashboard is a testament to my dedication to creating
+            applications that not only process data efficiently but also present
+            it in a manner that enriches user experience and decision-making.
+            It's a clear indicator of my capability to handle and visualize
+            data, underscoring my passion for technology, data analysis, and
+            sports.
+          </p>
+          <a
+            href="https://github.com/AnthonyMariani/NFL-Analytics-Dashboard"
+            target="_blank"
+          >
+            View my code on GitHub
+          </a>
+        </div>
+
+        <div class="image-grid">
+          <img
+            src="images/NFLApp.png"
+            alt="Player Search Screenshot"
+            class="screenshot"
+          />
+          <img
+            src="images/NFLApp2.png"
+            alt="Filtering Screenshot"
+            class="screenshot"
+          />
+          <img
+            src="images/NFLApp3.png"
+            alt="Season Leaders Screenshot"
+            class="screenshot"
+          />
+          <img
+            src="images/NFLApp4.png"
+            alt="Fantasy Football Screenshot"
+            class="screenshot"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Detail Modal for Project 2 -->
+    <div id="project2" class="project-detail-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeProjectDetail('project2')"
+          >&times;</span
+        >
+        <h3 class="project-title">Project 2 Title</h3>
+        <!-- ... Rest of the content for Project 2 ... -->
+      </div>
+    </div>
+
+    <!-- Project Detail Modal for Project 3 -->
+    <div id="project3" class="project-detail-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeProjectDetail('project3')"
+          >&times;</span
+        >
+        <h3 class="project-title">Project 3 Title</h3>
+        <!-- ... Rest of the content for Project 3 ... -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
